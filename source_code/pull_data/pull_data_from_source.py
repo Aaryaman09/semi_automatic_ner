@@ -1,6 +1,5 @@
-import json, requests
+import requests
 from typing import Dict, List, Tuple
-from icecream import ic
 
 
 class PullDataFromCloud:
@@ -28,8 +27,8 @@ class PullDataFromCloud:
         for line in text_data:
             if line != "":
                 tag, token = line.strip().split(seperator)
-                temp_tokens.append(tag)
-                temp_tags.append(token)
+                temp_tokens.append(token)
+                temp_tags.append(tag)
             else:
                 tokens.append(temp_tokens)
                 tags.append(temp_tags)

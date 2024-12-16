@@ -12,5 +12,4 @@ if __name__ == '__main__':
         datasources=config.get('source_config'),
         separators=config.get('separators'))()
     
-    dataset = BERTModelDatasetBuilder(token_and_tags=token_and_tags)()
-    
+    dataset, index2tag, tag2index = BERTModelDatasetBuilder(token_and_tags=token_and_tags)()
