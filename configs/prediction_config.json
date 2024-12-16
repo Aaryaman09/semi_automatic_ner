@@ -1,0 +1,7 @@
+{
+    "prediction_config":{
+        "task":"token-classification",
+        "model":"ner_distilbert",
+        "aggregation_strategy":"simple"
+    }
+}

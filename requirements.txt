@@ -6,4 +6,5 @@ gradio
 torch
 datasets
 accelerate
-icecream
+seqeval
+evaluate
