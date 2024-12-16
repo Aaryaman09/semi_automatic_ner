@@ -18,7 +18,7 @@ class PullDataFromCloud:
             self._pull_data_util(self.datasources.get('validation'))
         )
     
-    def generate_tokens_and_tags(self, text_data:List[str], seperator:str):
+    def generate_tokens_and_tags(self, text_data:List[str], seperator:str)->Tuple[List[List[str]], List[List[str]]]:
         tokens = []
         tags = []
 
@@ -38,7 +38,7 @@ class PullDataFromCloud:
 
         return tokens, tags
     
-    def pull_train_test_data(self)->Dict:
+    def __call__(self)->Dict:
         train_str, test_str, validation_str = self.pull_data()
 
         train_tokens, train_tags = self.generate_tokens_and_tags(text_data=train_str, seperator=self.separators.get('train'))
@@ -47,24 +47,15 @@ class PullDataFromCloud:
 
         return {
             "train_data":{
-                'tokens': train_tokens[0],
-                'tags': train_tags[0]
+                'tokens': train_tokens,
+                'tags': train_tags
             },
             "test_data":{
-                'tokens': test_tokens[0],
-                'tags': test_tags[0]
+                'tokens': test_tokens,
+                'tags': test_tags
             },
             "validation_data":{
-                'tokens': validation_tokens[0],
-                'tags': validation_tags[0]
+                'tokens': validation_tokens,
+                'tags': validation_tags
             }
         }
-
-
-if __name__ == '__main__':
-    with open('configs\source_data.json', 'r') as file:
-        config = json.load(file)
-
-    ic(PullDataFromCloud(datasources=config.get('source_config'),
-                      separators=config.get('separators')).pull_train_test_data())
-        
