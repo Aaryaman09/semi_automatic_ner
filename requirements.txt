@@ -1,3 +1,9 @@
 Flask
+pandas
 numpy
--e .
+transformers[torch]
+gradio
+torch
+datasets
+accelerate
+icecream
