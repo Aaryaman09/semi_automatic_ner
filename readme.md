@@ -40,7 +40,7 @@ Please Find Apps screenshot in app_screenshots folder.
 
 - Real-Time Training Logs: Display training progress logs dynamically on the UI.
 
-- IOB-Format Dataset Support: Works seamlessly with BIO-tagged datasets (e.g., restaurant dataset).
+- IOB-Format Dataset Support: Works seamlessly with BIO-tagged datasets (e.g., [restaurant dataset](https://github.com/Aaryaman09/semi_automatic_ner/tree/main/datatset)).
 
 # Assumptions - (IMPORTANT)
 
