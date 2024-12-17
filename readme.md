@@ -46,9 +46,11 @@ Please Find Apps screenshot in app_screenshots folder.
 
 1. The application takes IOB (.bio) format files as input for training. You may use any such dataset; this project uses the "restaurant" dataset for demonstration.
 
-2. Real-time training logs are enabled for better visibility using a global variable. For cleaner modularization (without real-time logging), the trainer code can be moved back to a separate script in the source_code folder.
+2. The Configs are not protected, any absured configuration given may lead to failure. Please take precautions before entering any configuration. 
 
-3. This is the first version of the UI, so minor glitches may exist. Feedback is welcome for improvements.
+3. Real-time training logs are enabled for better visibility using a global variable. For cleaner modularization (without real-time logging), the trainer code can be moved back to a separate script in the source_code folder.
+
+4. This is the first version of the UI, so minor glitches may exist. Feedback is welcome for improvements.
 
 # Model training output in terminal
 
@@ -59,7 +61,6 @@ Please Find Apps screenshot in app_screenshots folder.
 | **overall-precision** | `77.4%` |
 | **overall-recall** | `81.1%` |
 
-![Logo](https://github.com/Aaryaman09/semi_automatic_ner/blob/main/model_training_screenshot/model_training.JPG?raw=true)
 
 
 # Setup Instructions

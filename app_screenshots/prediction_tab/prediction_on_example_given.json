@@ -1,0 +1,54 @@
+{
+    "text": "\nI recently visited The Green Bistro in downtown New York, and I had the most delicious pasta with fresh basil. \nThe service was impeccable, and I highly recommend their signature cocktails. \nMy friend had a vegetarian pizza, and we enjoyed a bottle of Italian red wine.\n",
+    "entities": [
+      {
+        "entity_group": "Restaurant_Name",
+        "score": 0.9731545,
+        "word": "green bistro",
+        "start": 24,
+        "end": 36
+      },
+      {
+        "entity_group": "Location",
+        "score": 0.94906646,
+        "word": "downtown new york",
+        "start": 40,
+        "end": 57
+      },
+      {
+        "entity_group": "Dish",
+        "score": 0.9106815,
+        "word": "pasta",
+        "start": 88,
+        "end": 93
+      },
+      {
+        "entity_group": "Dish",
+        "score": 0.7854656,
+        "word": "fresh basil",
+        "start": 99,
+        "end": 110
+      },
+      {
+        "entity_group": "Dish",
+        "score": 0.5959684,
+        "word": "signature cocktail",
+        "start": 170,
+        "end": 188
+      },
+      {
+        "entity_group": "Dish",
+        "score": 0.6717162,
+        "word": "vegetarian pizza",
+        "start": 208,
+        "end": 224
+      },
+      {
+        "entity_group": "Dish",
+        "score": 0.8225685,
+        "word": "italian red wine",
+        "start": 253,
+        "end": 269
+      }
+    ]
+  }

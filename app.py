@@ -132,7 +132,8 @@ with gr.Blocks() as ner_ui:
         gr.HTML(github_markdown_content)
 
     with gr.Tab("Prediction"):
-        gr.Markdown("### Enter text for NER prediction")
+        gr.Markdown("## Enter text for NER prediction.")
+        gr.Markdown("### example provided, replace it by desired text.")
         text_input = gr.Textbox(label="Input Text", placeholder="Enter text here...", value=prediction_example)
         prediction_output = gr.JSON(label="Predicted Entities")
         predict_button = gr.Button("Predict")
@@ -146,14 +147,14 @@ with gr.Blocks() as ner_ui:
             gr.JSON(value=read_json(os.path.join('configs','model_config.json')), label="Model Config")
             gr.JSON(value=read_json(os.path.join('configs','prediction_config.json')), label="Prediction Config")
 
-        gr.Markdown("### As gr.JSON does not allow, please update the necessary config in bottom text box.###")
+        gr.Markdown("### As gr.JSON does not allow User input, please update the necessary config in bottom text box.")
 
         with gr.Accordion("Source Configurations", open=False):  
-            source_config_editor = gr.Textbox(value=read_json(os.path.join('configs','source_data.json')), label="Source Config", lines=10)
+            source_config_editor = gr.Textbox(value=read_json(os.path.join('configs','source_data.json')), label="Source Config", lines=7)
         with gr.Accordion("Model Configurations", open=False):
-            model_config_editor = gr.Textbox(value=read_json(os.path.join('configs','model_config.json')), label="Model Config", lines=10)
+            model_config_editor = gr.Textbox(value=read_json(os.path.join('configs','model_config.json')), label="Model Config", lines=3)
         with gr.Accordion("Prediction Configurations", open=False):
-            prediction_config_editor = gr.Textbox(value=read_json(os.path.join('configs','prediction_config.json')), label="Prediction Config", lines=10)
+            prediction_config_editor = gr.Textbox(value=read_json(os.path.join('configs','prediction_config.json')), label="Prediction Config", lines=3)
 
         save_button = gr.Button("Save Configurations")
         save_status = gr.Label()
