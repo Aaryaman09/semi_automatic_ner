@@ -105,21 +105,23 @@ http://localhost:7860
 
 ## 1. Prediction Tab
 
-    - Input any text string in the provided field.
+- Input any text string in the provided field.
 
-    - Click the "Submit" button to get NER token classification predictions.
+- Click the "Predict" button to get NER token classification predictions.
 
-    - Results are displayed in a JSON editor format for clarity.
+- Results are displayed in a JSON editor format for clarity.
 
 ## 2. Configuration & Training Tab
 
-    - Review and update model training configurations as needed.
+- Review and update model training configurations as needed.
 
-    - Check the "Finalize Configuration" checkbox to enable training.
+- Check the "Finalize Configuration" checkbox to enable training.
 
-    - Once finalized, click "Start Training" to trigger the training process.
+- Once finalized, click "Start Training" to trigger the training process.
 
-    - Monitor real-time training logs directly on the UI.
+- Monitor real-time training logs directly on the UI.
+
+**NOTE**: If failed try changing the configuration, save it and rerun.
 
 # Technical Details
 
@@ -133,7 +135,7 @@ http://localhost:7860
 
     - Gradio for the UI.
 
-    - Python 3.11
+    - **Python 3.11.11**
 
 # Future Improvements
 
