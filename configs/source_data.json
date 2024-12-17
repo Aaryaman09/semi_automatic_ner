@@ -1,14 +1,12 @@
 {
     "source_config": {
-        "train": "https://raw.githubusercontent.com/laxmimerit/All-CSV-ML-Data-Files-Download/refs/heads/master/mit_restaurant_search_ner/train.bio",
-        "test": "https://raw.githubusercontent.com/laxmimerit/All-CSV-ML-Data-Files-Download/refs/heads/master/mit_restaurant_search_ner/test.bio",
-        "validation": "https://raw.githubusercontent.com/laxmimerit/All-CSV-ML-Data-Files-Download/refs/heads/master/mit_restaurant_search_ner/test.bio"
+        "train": "https://raw.githubusercontent.com/Aaryaman09/semi_automatic_ner/refs/heads/main/datatset/train.bio",
+        "test": "https://raw.githubusercontent.com/Aaryaman09/semi_automatic_ner/refs/heads/main/datatset/test.bio",
+        "validation": "https://raw.githubusercontent.com/Aaryaman09/semi_automatic_ner/refs/heads/main/datatset/test.bio"
     },
-    "separators":{
+    "separators": {
         "train": "\t",
         "test": "\t",
         "validation": "\t"
     }
 }
-
-

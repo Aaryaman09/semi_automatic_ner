@@ -1,12 +1,12 @@
 {
-    "model_name":"distilbert-base-uncased",
-    "training_arguments":{
-        "output_dir":"finetuned-ner",
-        "eval_strategy":"epoch",
-        "save_strategy":"epoch",
-        "learning_rate":2e-5,
-        "num_train_epochs":3,
-        "weight_decay":0.01
+    "model_name": "distilbert-base-uncased",
+    "training_arguments": {
+        "output_dir": "finetuned-ner",
+        "eval_strategy": "epoch",
+        "save_strategy": "epoch",
+        "learning_rate": 2e-05,
+        "num_train_epochs": 4,
+        "weight_decay": 0.01
     },
-    "fine_tuned_model_dir":"ner_distilbert"
+    "fine_tuned_model_dir": "ner_distilbert"
 }

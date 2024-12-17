@@ -1,6 +1,7 @@
 from transformers import pipeline
-from icecream import ic
 from typing import Dict
+from source_code.util import read_json
+import os
 
 class Predictor:
     def __init__(self, prediction_config:Dict):
@@ -8,11 +9,16 @@ class Predictor:
 
     def predict(self, input_str:str):
         return self.pipe(input_str)
-    
-if __name__=='__main__':
-    predictor_obj = Predictor(
-        task="token-classification",
-        model="ner_distilbert",
-        aggregation_strategy="simple")
-    
-    ic(predictor_obj.predict("which restaurant serves the best shushi in new york?"))
+
+
+#####################################################################################
+#####################################################################################
+
+
+# Gradio NER prediction function
+def ner_predict(text:str):
+    """Perform NER prediction on input text."""
+    prediction_config = read_json(path = os.path.join('configs','prediction_config.json')).get('prediction_config')
+    predictor_obj = Predictor(prediction_config=prediction_config)
+    entities = predictor_obj.predict(text) ## Predictions
+    return {"text": text, "entities": entities}
