@@ -1,0 +1,4 @@
+## NOTE ##
+
+training executor.py is the code that has been kept in gradio app to provide real time model training via global variables. 
+This design is not optimal and can be improved in the future, but in the interest of time i have built this design.

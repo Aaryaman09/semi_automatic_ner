@@ -7,7 +7,7 @@ from source_code.util import read_json, time_right_now
 
 import os
 
-# Function to start training
+# Function to start training - Same code kept in gradio app - This is where we can place it to increase code modularity.
 training_logs = []
 training_status = "Not started"
 def train_ner_model():
